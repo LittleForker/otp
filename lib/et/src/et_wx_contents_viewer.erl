@@ -463,7 +463,8 @@ create_window(S) ->
     Bar = wxMenuBar:new(),
     wxFrame:setMenuBar(Frame,Bar),
     create_file_menu(Bar),
-    Editor = wxTextCtrl:new(Panel, ?wxID_ANY, [{style, 0
+    Editor = wxTextCtrl:new(Panel, ?wxID_ANY, [{size,{W,H}},
+					       {style, 0
 						bor  ?wxDEFAULT
 						bor ?wxTE_MULTILINE
 						bor ?wxTE_READONLY
